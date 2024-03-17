@@ -35,11 +35,11 @@ body {
 
 .data-name {
 	color: var(--back-font);
-	font-size: 1rem;
+	font-size: 2rem;
 	margin-bottom: 0.3rem;
 }
 
 .data {
 	color: var(--accent);
-	font-size: 2rem;
+	font-size: 3rem;
 }
