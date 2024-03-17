@@ -27,9 +27,9 @@ async function updateSensorData() {
 	console.log(data);
 
 	lastUpdateElement.innerHTML = "Last Successful Update: " + formatDate(new Date());
-	temperatureElem.innerHTML = data.temperature + " °C";
-	relativeHumidityElem.innerHTML = data.relative_humidity + " %";
-	absoluteHumidityElem.innerHTML = data.absolute_humidity + " g/m³";
+	temperatureElem.innerHTML = data.temperature.toFixed(2) + " °C";
+	relativeHumidityElem.innerHTML = data.relative_humidity.toFixed(2) + " %";
+	absoluteHumidityElem.innerHTML = data.absolute_humidity.toFixed(2) + " g/m³";
 	eco2Elem.innerHTML = data.eco2 + " ppm";
 	tvocElem.innerHTML = data.tvoc + " ppb";
 }
