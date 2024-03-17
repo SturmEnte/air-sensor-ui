@@ -3,6 +3,8 @@
 	--sec-background: #2e2e2e;
 	--accent: #fcf96a;
 	--back-font: #797979;
+
+	--padding: 20px;
 }
 
 body {
@@ -16,16 +18,19 @@ body {
 	width: 100vw;
 	height: 100vh;
 
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
+	padding: var(--padding);
+	box-sizing: border-box;
+
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(2, auto);
+	gap: var(--padding);
 }
 
 .data-element {
 	background: var(--sec-background);
 	border-radius: 10px;
-	padding: 10px;
+	padding: var(--padding);
 }
 
 .data-name {
