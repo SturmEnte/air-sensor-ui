@@ -1,8 +1,8 @@
-const temperatureElem = document.getElementById("temperature");
-const relativeHumidityElem = document.getElementById("relative-humidity");
-const absoluteHumidityElem = document.getElementById("absolute-humidity");
-const eco2Elem = document.getElementById("eco2");
-const tvocElem = document.getElementById("tvoc");
+const temperatureElem = document.getElementById("temperature-data");
+const relativeHumidityElem = document.getElementById("relative-humidity-data");
+const absoluteHumidityElem = document.getElementById("absolute-humidity-data");
+const eco2Elem = document.getElementById("eco2-data");
+const tvocElem = document.getElementById("tvoc-data");
 
 const settings = JSON.parse(localStorage.getItem("settings"));
 
@@ -23,11 +23,11 @@ async function updateSensorData() {
 
 	console.log(data);
 
-	temperatureElem.innerHTML = data.temperature;
-	relativeHumidityElem.innerHTML = data.relative_humidity;
-	absoluteHumidityElem.innerHTML = data.absolute_humidity;
-	eco2Elem.innerHTML = data.eco2;
-	tvocElem.innerHTML = data.tvoc;
+	temperatureElem.innerHTML = data.temperature + " °C";
+	relativeHumidityElem.innerHTML = data.relative_humidity + " %";
+	absoluteHumidityElem.innerHTML = data.absolute_humidity + " g/m³";
+	eco2Elem.innerHTML = data.eco2 + " ppm";
+	tvocElem.innerHTML = data.tvoc + " ppb";
 }
 
 updateSensorData();

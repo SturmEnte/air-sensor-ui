@@ -1,0 +1,19 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: white;
+}
+
+.data-element {
+	background: #333333;
+	border-radius: 10px;
+	padding: 10px;
+}
+
+.data {
+	display: flex;
+	flex-direction: row;
+}
+
+.data:first-child {
+	margin-right: 5px;
+}
